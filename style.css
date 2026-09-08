@@ -1,0 +1,44 @@
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#0d0b14; --panel:#15121f; --line:#2a2338;
+  --ink:#f4f2f8; --muted:#a79fbd; --accent:#c04ef0; --accent2:#f0509a;
+  --maxw:720px;
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+}
+a{color:var(--accent2)}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header{padding:22px 0; border-bottom:1px solid var(--line)}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.02em; font-size:19px; color:var(--ink); text-decoration:none}
+.key{width:26px;height:26px;flex:none}
+.nav a.lnk{color:var(--muted); text-decoration:none; font-size:14px; margin-left:18px}
+.nav a.lnk:hover{color:var(--ink)}
+.hero{padding:78px 0 66px; text-align:center}
+h1{font-size:clamp(34px,7vw,54px); line-height:1.08; letter-spacing:-.03em; margin:0 0 18px;
+  background:linear-gradient(100deg,var(--accent),var(--accent2)); -webkit-background-clip:text;
+  background-clip:text; color:transparent}
+.sub{font-size:clamp(17px,2.4vw,20px); color:var(--muted); margin:0 auto; max-width:34em}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; padding:14px 0 74px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px}
+.card h3{margin:0 0 7px; font-size:16px}
+.card p{margin:0; color:var(--muted); font-size:14.5px}
+main.doc{padding:46px 0 84px}
+main.doc h1{font-size:clamp(28px,5vw,38px); text-align:left; margin-bottom:6px}
+.eff{color:var(--muted); font-size:14px; margin:0 0 34px}
+h2{font-size:20px; margin:38px 0 10px; letter-spacing:-.01em}
+h3{font-size:16px; margin:24px 0 6px}
+p,li{color:#ddd8ea}
+ul{padding-left:20px} li{margin:5px 0}
+.note{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:10px; padding:15px 18px; margin:26px 0}
+.note p{margin:0; font-size:14.5px; color:var(--muted)}
+table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; display:block; overflow-x:auto}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+th{color:var(--muted); font-weight:600; white-space:nowrap}
+footer{border-top:1px solid var(--line); padding:26px 0 44px; color:var(--muted); font-size:14px}
+footer a{color:var(--muted); text-decoration:none; margin-right:16px}
+footer a:hover{color:var(--ink)}
