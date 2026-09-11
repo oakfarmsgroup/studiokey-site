@@ -1,7 +1,11 @@
 *,*::before,*::after{box-sizing:border-box}
+/* Brand, matching the app: the SK mark on black, Exo 2 for the name and
+   headings, purple #8B5CF6 with the app's pink #EC4899 as its partner. */
 :root{
-  --bg:#0d0b14; --panel:#15121f; --line:#2a2338;
-  --ink:#f4f2f8; --muted:#a79fbd; --accent:#c04ef0; --accent2:#f0509a;
+  --bg:#000000; --panel:#0e0e10; --line:#232327;
+  --ink:#ffffff; --muted:#8e8e93; --body:#d1d1d6;
+  --accent:#8b5cf6; --accent2:#ec4899;
+  --display:"Exo 2",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --maxw:720px;
 }
 html{-webkit-text-size-adjust:100%}
@@ -9,29 +13,34 @@ body{
   margin:0; background:var(--bg); color:var(--ink);
   font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
 }
-a{color:var(--accent2)}
+a{color:var(--accent)}
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
-header{padding:22px 0; border-bottom:1px solid var(--line)}
+header{padding:20px 0; border-bottom:1px solid var(--line)}
 .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
-.brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.02em; font-size:19px; color:var(--ink); text-decoration:none}
-.key{width:26px;height:26px;flex:none}
+.brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:700;
+  font-size:21px; letter-spacing:-.01em; color:var(--ink); text-decoration:none}
+.brand b{font-weight:700; color:var(--accent)}
+.mark{height:24px; width:auto; flex:none}
 .nav a.lnk{color:var(--muted); text-decoration:none; font-size:14px; margin-left:18px}
 .nav a.lnk:hover{color:var(--ink)}
 .hero{padding:78px 0 66px; text-align:center}
-h1{font-size:clamp(34px,7vw,54px); line-height:1.08; letter-spacing:-.03em; margin:0 0 18px;
-  background:linear-gradient(100deg,var(--accent),var(--accent2)); -webkit-background-clip:text;
-  background-clip:text; color:transparent}
+.hero-mark{height:88px; width:auto; margin:0 auto 28px; display:block}
+h1,h2,h3{font-family:var(--display); font-weight:700}
+h1{font-size:clamp(34px,7vw,54px); line-height:1.08; letter-spacing:-.02em; margin:0 0 18px; color:var(--ink)}
+.hero h1 span{color:var(--accent)}
 .sub{font-size:clamp(17px,2.4vw,20px); color:var(--muted); margin:0 auto; max-width:34em}
+.tag{font-family:var(--display); font-weight:600; color:var(--muted); letter-spacing:.14em;
+  text-transform:uppercase; font-size:13px; margin:0 0 14px}
 .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; padding:14px 0 74px}
-.card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px}
-.card h3{margin:0 0 7px; font-size:16px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px}
+.card h3{margin:0 0 7px; font-size:17px}
 .card p{margin:0; color:var(--muted); font-size:14.5px}
 main.doc{padding:46px 0 84px}
 main.doc h1{font-size:clamp(28px,5vw,38px); text-align:left; margin-bottom:6px}
 .eff{color:var(--muted); font-size:14px; margin:0 0 34px}
-h2{font-size:20px; margin:38px 0 10px; letter-spacing:-.01em}
+h2{font-size:21px; margin:38px 0 10px}
 h3{font-size:16px; margin:24px 0 6px}
-p,li{color:#ddd8ea}
+p,li{color:var(--body)}
 ul{padding-left:20px} li{margin:5px 0}
 .note{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
   border-radius:10px; padding:15px 18px; margin:26px 0}
